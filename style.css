@@ -1,10 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
 * {
     margin: 0;
     padding: 0;
+    font-family: "lato", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+body {
+    background-color: #4575b6;
 }
 
 h1 {
-    margin-top: 1rem;
+    font-size: 40px;
+    margin: 0.7rem;
+    color: azure;
+    padding: 0.5rem;
+    border-bottom: 3px solid crimson;
 }
 
 .container {
@@ -14,10 +27,10 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80vw;
-    height: 60vh;
+    width: 60vw;
+    height: 75vh;
     background-color: blueviolet;
-    border-radius: 5%;
+    border-radius: 15px;
 }
 
 div {
@@ -25,16 +38,47 @@ div {
 }
 
 label {
-    font-size: 1.5rem;
+    margin-right: 1rem;
 }
 
 #sizepass, #password {
-    width: 15vw;
+    border: none;
+    outline: none;
+    width: 2.5rem;
     text-align: center;
-    font-size: 1rem;
     font-weight: 800;
+    background-color: rgb(212, 190, 233);
 }
 
-/* input [type="checkbox"]{
-    
-} */
+#password {
+    width: 30vw;
+}
+
+#sizepass:focus ,#password:focus {
+    border-bottom: 2.5px solid crimson;
+}
+
+button {
+    border: none;
+    padding: 0.4rem;
+    background-color: crimson;
+    color: azure;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#copiar {
+    padding: 0.2rem 1rem;
+    font-size: 20px;
+}
+
+#generar {
+    padding: 0.5rem 1.5rem;
+    margin: 1rem auto;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

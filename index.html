@@ -9,30 +9,30 @@
 </head>
 <body>
     <div class="container">
-        <h1>Generador password</h1>
+        <h1>Generador de password</h1>
         <div>
             <input type="text" name="password" id="password">
-            <button>Copiar</button>
+            <button id="copiar">Copiar</button>
         </div>
         <div>
-            <label for="sizepass">Tamaño</label>
+            <label for="sizepass">Tamaño:</label>
             <input type="number" value="8" min="8" max="30" name="sizepass" id="sizepass">
         </div>
         <div>
             <label for="mayus">Mayusculas</label>
-            <input type="checkbox" name="MAYUSCULAS" id="mayus">
+            <input type="checkbox" name="MAYUSCULAS" id="mayus" checked>
         </div>
         <div>
             <label for="minus">Minusculas</label>
-            <input type="checkbox" name="MINUSCULAS" id="minus">
+            <input type="checkbox" name="MINUSCULAS" id="minus" checked>
         </div>
         <div>
             <label for="number">Números</label>
-            <input type="checkbox" name="NÚMEROS" id="number">
+            <input type="checkbox" name="NÚMEROS" id="number" checked>
         </div>
         <div>
             <label for="simbol">Simbolos</label>
-            <input type="checkbox" name="SIMBOLOS" id="simbol">
+            <input type="checkbox" name="SIMBOLOS" id="simbol" checked>
         </div>
         <button id="generar">Generar</button>
     </div>

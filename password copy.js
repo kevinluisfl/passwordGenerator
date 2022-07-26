@@ -14,6 +14,7 @@ let checkCharact = document.getElementById("simbol");
 let sizepass = document.getElementById("sizepass");
 
 checkMayus.addEventListener("change",()=>{
+    // let isCheckedMa = checkMayus.checked;
     // let check = checkMayus.spellcheck;
     // console.log(checkMayus.toggleAttribute("checked"));
     let check = checkMayus.toggleAttribute("checked");
