@@ -22,13 +22,13 @@ h1 {
 
 .container {
     margin: auto;
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 60vw;
-    height: 75vh;
+    height: 85vh;
     background-color: blueviolet;
     border-radius: 15px;
 }
