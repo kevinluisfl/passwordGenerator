@@ -86,7 +86,6 @@ btnGenerar.addEventListener("click",()=>{
         /**
          * ? Una vez cortado se devuelve a string, para asignar y mostrar resultado
          */
-        // let newpass = passArr.slice(0,sizepass.value).join('');
         let newpass = passArrNew.slice(0,sizepass.value).join('');
         password.value = newpass;
         pass = "";
