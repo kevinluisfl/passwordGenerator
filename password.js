@@ -95,6 +95,45 @@ btnGenerar.addEventListener("click",()=>{
 /**
  * ? Evento para copiar password al dar click en el boton "Copiar"
  */
-btnCopiar.addEventListener("click", ()=>{
+let confirma = document.getElementById("confirmCopy");
+/**
+ * ? el callback se hace async por la promesa
+ */
+btnCopiar.addEventListener("click", async ()=>{
     console.log("copiar: ", password.value);
+    /**
+     * *Bandera para confirmar respuestas de la promesa
+     */
+    let copied = false;
+    /**
+     * ! exec.Command en algunos no funciona, y otros no tienen navigator.clipboard
+     */
+    if (!navigator.clipboard) {
+        // Clipboard API not available
+        let res = document.execCommand('copy');
+        copied = res && true;
+    }else {
+        // Clipboard API available, para pegar es readText()
+        /**
+         * ? se agrega await para que espere que se resuelva la promesa
+         */
+        await navigator.clipboard.writeText(password.value)
+        .then(() => {
+            console.log("Password copiada al portapapeles...")
+            copied = true;
+        })
+        .catch(err => {
+            console.log(' Ocurrio un error al copiar', err);
+        })
+    }
+    /**
+     * ? Muestra si copio y luego desaparece el mensaje a los 4 segundos
+     */
+    if(copied){
+        password.select();
+        confirma.textContent = "Successfully copied!"
+        setTimeout(()=>{
+            confirma.textContent = "";
+        },4000)
+    }
 })
