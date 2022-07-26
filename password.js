@@ -60,11 +60,14 @@ btnGenerar.addEventListener("click",()=>{
     }else {
         /**
          * ? Cuando hay un check activo se concatena a @pass
+         * * agrego un while, para cuando @sizepass sea mayor a @pass vuelva a concatenar
          */
-        if(checkMayus.checked) pass += mayus;
-        if(checkNumber.checked) pass += numbers;
-        if(checkMinus.checked) pass += minus;
-        if(checkCharact.checked) pass += characts;
+        while(pass.length < sizepass.value){
+            if(checkMayus.checked) pass += mayus;
+            if(checkNumber.checked) pass += numbers;
+            if(checkMinus.checked) pass += minus;
+            if(checkCharact.checked) pass += characts;
+        }
 
         /**
          * ? Se crea un array del string concatenado
@@ -74,19 +77,17 @@ btnGenerar.addEventListener("click",()=>{
         /**
          * ? Se usa la funcion que va mezclar los items
          */
-        ordenAleatorio(passArr);
+        let passArrNew = [];
+        for(let i = 0; i < sizepass.value; i++){
+            ordenAleatorio(passArr);
+            passArrNew.push(passArr[0]);
+        }
 
-        /**
-         * * Ejemplo de 2 formas para cortar el array
-         */
-        //**2 pasos, se corta el array de tamaño length igual al size**//
-        /* passArr.length = sizepass.value;
-        let newpass = passArr.join(''); */
-        //**1 paso**//
         /**
          * ? Una vez cortado se devuelve a string, para asignar y mostrar resultado
          */
-        let newpass = passArr.slice(0,sizepass.value).join('');
+        // let newpass = passArr.slice(0,sizepass.value).join('');
+        let newpass = passArrNew.slice(0,sizepass.value).join('');
         password.value = newpass;
         pass = "";
     }
