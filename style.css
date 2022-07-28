@@ -14,21 +14,22 @@ body {
 
 h1 {
     font-size: 40px;
-    margin: 0.7rem;
+    margin: 0.2rem 0.5rem;
     color: azure;
     padding: 0.5rem;
     border-bottom: 3px solid crimson;
+    text-align: center;
 }
 
 .container {
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60vw;
-    height: 85vh;
+    width: 80vw;
+    height: 90vh;
     background-color: blueviolet;
     border-radius: 15px;
 }
@@ -41,17 +42,24 @@ label {
     margin-right: 1rem;
 }
 
+#divpass {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #sizepass, #password {
     border: none;
     outline: none;
-    width: 2.5rem;
     text-align: center;
     font-weight: 800;
     background-color: rgb(212, 190, 233);
+    border-radius: 5px;
 }
 
 #password {
-    width: 30vw;
+    width: 70vw;
+    height: 1.4rem;
 }
 
 #sizepass:focus ,#password:focus {
@@ -74,13 +82,14 @@ button:hover{
 }
 
 #copiar {
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.5rem;
     font-size: 20px;
+    margin-top: 0.4rem;
 }
 
 #generar {
     padding: 0.5rem 1.5rem;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
 }
 
 input[type="checkbox"] {
@@ -93,3 +102,72 @@ input[type="checkbox"] {
     color: azure;
     font-size: 20px;
 }
+
+#copiar i {
+    padding: 0.2rem;
+}
+
+/* prueba*/
+input[type="checkbox"] + label{
+    cursor: pointer;
+    text-decoration: line-through;
+}
+input[type="checkbox"]:checked + label{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 600px){
+    * {
+        font-size: 22px;
+    }
+    .container {
+        margin: auto;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        height: 90vh;
+        background-color: blueviolet;
+        border-radius: 15px;
+    }
+    #password {
+        width: 60vw;
+    }
+    #copiar {
+        padding: 0 1rem;
+        padding-bottom: 0.2rem;
+        font-size: 20px;
+    }
+}
+
+/* @media screen and (min-width: 768px){
+} */
+
+@media screen and (min-width: 992px){
+    .container {
+        margin: auto;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 90vh;
+        background-color: blueviolet;
+        border-radius: 15px;
+    }
+    #divpass {
+        display: block;
+    }
+    #password {
+        width: 40vw;
+        height: 1.5rem;
+    }
+}
+
+/* @media screen and (min-width: 1200px){
+} */

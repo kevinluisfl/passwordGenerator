@@ -5,37 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/593ab14f6f.js" crossorigin="anonymous"></script>
     <title>Password generator</title>
 </head>
 <body>
     <div class="container">
         <h1>Generador de password</h1>
-        <div>
+        <div id="divpass">
             <input type="text" name="password" id="password">
-            <button id="copiar">Copiar</button>
+            <button id="copiar">Copiar<i class="fa-regular fa-copy"></i></button>
         </div>
         <p id="confirmCopy"></p>
         <div>
             <label for="sizepass">Tamaño:</label>
-            <input type="number" value="8" min="8" max="30" name="sizepass" id="sizepass">
+            <input type="number" value="14" min="8" max="30" name="sizepass" id="sizepass">
         </div>
         <div>
-            <label for="mayus">Mayusculas</label>
-            <input type="checkbox" name="MAYUSCULAS" id="mayus" checked>
+            <input type="checkbox" name="MAYUSCULAS" id="mayus" checked/>
+            <label for="mayus">Mayúsculas</label>
         </div>
         <div>
-            <label for="minus">Minusculas</label>
-            <input type="checkbox" name="MINUSCULAS" id="minus" checked>
+            <input type="checkbox" name="MINUSCULAS" id="minus" checked/>
+            <label for="minus">Minúsculas</label>
         </div>
         <div>
+            <input type="checkbox" name="NÚMEROS" id="number" checked/>
             <label for="number">Números</label>
-            <input type="checkbox" name="NÚMEROS" id="number" checked>
         </div>
         <div>
+            <input type="checkbox" name="SIMBOLOS" id="simbol" checked/>
             <label for="simbol">Simbolos</label>
-            <input type="checkbox" name="SIMBOLOS" id="simbol" checked>
         </div>
-        <button id="generar">Generar</button>
+        <button id="generar">Generar <i class="fa-regular fa-circle-check"></i></button>
     </div>
     <script src="password.js"></script>
 </body>
